@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Worker &mdash; Pets  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Transformer" href="transformer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Pets
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">scripts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="test.html">Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transformer.html">Transformer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Worker</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pets</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">scripts</a> &raquo;</li>
+        
+      <li>Worker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/worker.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-RestEngine"></span><div class="section" id="worker">
+<h1>Worker<a class="headerlink" href="#worker" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="RestEngine.Worker">
+<em class="property">class </em><code class="sig-prename descclassname">RestEngine.</code><code class="sig-name descname">Worker</code><span class="sig-paren">(</span><em class="sig-param">date</em>, <em class="sig-param">time</em>, <em class="sig-param">interval=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RestEngine.html#Worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RestEngine.Worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Worker implementation for jobs</p>
+<dl class="method">
+<dt id="RestEngine.Worker.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">date</em>, <em class="sig-param">time</em>, <em class="sig-param">interval=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RestEngine.html#Worker.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RestEngine.Worker.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize Worker for submitted jobs</p>
+<dl>
+<dt>Args:</dt><dd><p>date (string): current date.</p>
+<p>time(string): threshold parameter used for binary label prediction.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dataset (BinaryLabelDataset): Transformed Dataset.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="RestEngine.Worker.doAlert">
+<code class="sig-name descname">doAlert</code><span class="sig-paren">(</span><em class="sig-param">framesDir</em>, <em class="sig-param">fps</em>, <em class="sig-param">averageNumOfPersons</em>, <em class="sig-param">greenAlertDir</em>, <em class="sig-param">redAlertDir</em>, <em class="sig-param">alertPercentage</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RestEngine.html#Worker.doAlert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RestEngine.Worker.doAlert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs alert</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>framesDir (string): directory where frames are located</p>
+</dd>
+<dt>Returns:</dt><dd><p>Test: Returns self.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="RestEngine.Worker.generateVisualization">
+<code class="sig-name descname">generateVisualization</code><span class="sig-paren">(</span><em class="sig-param">framesDir</em>, <em class="sig-param">redAlertDir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RestEngine.html#Worker.generateVisualization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RestEngine.Worker.generateVisualization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated visualization.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RestEngine.Worker.getVideoByDate">
+<code class="sig-name descname">getVideoByDate</code><span class="sig-paren">(</span><em class="sig-param">year</em>, <em class="sig-param">month</em>, <em class="sig-param">day</em>, <em class="sig-param">hours</em>, <em class="sig-param">minutes</em>, <em class="sig-param">seconds</em>, <em class="sig-param">jobTempDir</em>, <em class="sig-param">threshold</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RestEngine.html#Worker.getVideoByDate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RestEngine.Worker.getVideoByDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves relevant video file according to provided date/time</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>param: Input param.</p>
+</dd>
+<dt>Returns:</dt><dd><p>Test: Returns self.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="transformer.html" class="btn btn-neutral float-left" title="Transformer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Bursh
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
