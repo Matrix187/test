@@ -1,4 +1,4 @@
-scripts
+script_s
 =======
 
 .. toctree::
