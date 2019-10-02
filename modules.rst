@@ -5,5 +5,4 @@ scripts
    :maxdepth: 4
 
    test
-   transformer
    worker
