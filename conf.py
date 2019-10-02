@@ -41,7 +41,7 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
-autodoc_mock_imports = ["util","detection","cv2"]
+autodoc_mock_imports = ["util","detection","cv2","torch"]
 
 
 # -- Options for HTML output -------------------------------------------------
