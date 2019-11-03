@@ -1,0 +1,24 @@
+sudo: required
+services:
+  - docker
+#  - conda
+
+language: python
+os: linux
+python:
+  - "2.7"
+# command to install dependencies
+install:
+  - pip install --progress-bar off -r requirements.txt
+cache: pip
+
+# safelist
+branches:
+  only:
+  - master
+
+before_script:
+  - ls
+
+script:
+  - pytest -q test_sysexit.py
