@@ -70,12 +70,23 @@ class Worker(object):
             log.info("Processing GREEN alert (2 person detected) !!")
             outFile = os.path.join(greenAlertDir, "result.avi")
             ExtractFrames.generateVisualization(framesDir, outFile,fps)		
-		
-	
-	
-	
+
+    def funcToCheck(self, a,b,c):
+        """ funcToCheck method
+
+        Args:
+            a (string): b c
+        Returns:
+            Test: Returns -1
+        """
+
+        log.info("Processing alert ...")
+
+        return -1
+
+
     def getVideoByDate(self,year,month,day,hours,minutes,seconds,jobTempDir,threshold):
-        """ Retrieves relevant video file according to provided date/time
+        """ Retrieves  relevant video file according to provided date/time
 		
         Args:
             param: Input param.
