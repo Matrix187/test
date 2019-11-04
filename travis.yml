@@ -1,24 +1,15 @@
-sudo: required
-services:
-#  - docker
-#  - conda
-
 language: python
-os: linux
 python:
-  - "2.7"
-# command to install dependencies
+  - 2.7
+  - 3.5
+  - 3.6
+before_install:
+  - python --version
+  - pip install -U pip
+  - pip install -U pytest
+  - pip install codecov
 install:
-  - pip install --progress-bar off -r requirements.txt
-cache: pip
-
-# safelist
-branches:
-  only:
-  - master
-
-before_script:
-  - ls
-
-script:
-  - pytest -q test_sysexit.py
+  - pip install ".[test]" . # install package + test dependencies
+script: pytest -q test_sysexit.py
+after_success:
+  - codecov # submit coverage
