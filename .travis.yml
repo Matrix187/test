@@ -1,16 +1,16 @@
-language: python
+language:
+  - python
+
 python:
-  - 2.7
-  - 3.5
   - 3.6
+
 before_install:
   - python --version
   - pip install -U pip
   - pip install -U pytest
-  - pip install codecov
+
 install:
   - pip install --progress-bar off -r requirements.txt
 
-script: pytest -q test_sysexit.py
-after_success:
-  - codecov # submit coverage
+script:
+  - pytest -q test_sysexit.py
