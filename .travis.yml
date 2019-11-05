@@ -18,5 +18,8 @@ before_install:
 install:
   - pip install --progress-bar off -r requirements.txt
 
+before_script:
+  - ls
+
 script:
   - pytest -q test_class.py
