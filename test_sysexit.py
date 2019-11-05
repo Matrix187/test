@@ -3,7 +3,7 @@ import pytest
 
 
 def f():
-    raise SystemExit(9)
+    raise SystemExit(0)
 
 
 def test_mytest():

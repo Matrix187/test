@@ -13,4 +13,4 @@ install:
   - pip install --progress-bar off -r requirements.txt
 
 script:
-  - pytest -q test_sysexit.py
+  - pytest -q test_class.py
