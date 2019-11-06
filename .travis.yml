@@ -3,6 +3,7 @@ sudo:
 
 services:
   - docker
+  - conda
 
 language:
   - python
