@@ -1,1 +1,5 @@
 pytest
+Cython
+EasyDict
+opencv-python
+mxnet-cu80==1.0.0
